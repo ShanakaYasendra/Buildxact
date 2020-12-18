@@ -16,13 +16,7 @@ namespace Buildxact.Test
         /// 3.	Click the Add User button
         /// 4.	Complete user information on New User form and submit
         /// 5.	Logout
-        /// 6.	Navigate to the new user’s mailbox
-        /// 7.	Open the Welcome email
-        /// 8.	Click the Activate button to activate the new user
-        /// 9.	Enter the new user’s password in the New Password field
-        /// 10.	Enter the new password on the Confirm New Password field
-        /// 11.	Click the login button
-        /// 12.	Confirm user lands on the Dashboard page
+        /// Please Update the new user details	
        /// </summary>
 
 
@@ -35,17 +29,29 @@ namespace Buildxact.Test
             Assert.AreEqual(pages.homePage.GetTitle(), "Buildxact-stg: Dashboard");
             pages.menuBar.ClickBusiness();
             pages.menuBar.ClickUsers();
-            pages.addNewUser.AddUser("sh", "sh", "sh@email.ghostinspector.com","0430123333");
+            pages.addNewUser.AddUser("sh", "sh", "sh@email.ghostinspector.com","0430123333"); //Please Update the new user details	
             pages.menuBar.ClickProfile();
             pages.menuBar.LogOut();
             
         }
 
+
+        /// <summary>
+        /// 6. Navigate to the new user’s mailbox
+        /// 7.	Open the Welcome email
+        /// 8.	Click the Activate button to activate the new user
+        /// 9.	Enter the new user’s password in the New Password field
+        /// 10.	Enter the new password on the Confirm New Password field
+        /// 11.	Click the login button
+        /// 12.	Confirm user lands on the Dashboard page
+        /// Please update the user in the email login
+        /// </summary>
         [Test, Order(2)]
         public void AddUserEmailTest()
         {
-            browser.Init("https://email.ghostinspector.com/sh");
-       
+            string username = "sh"; //Please update the user in the email login
+            browser.Init("https://email.ghostinspector.com/"+username); 
+
             pages.emailPage.ClickWelcomeEmail();
             pages.emailPage.ClickActivate();
             pages.resetPasswordPage.EnterNewPassword("Test@1234");
