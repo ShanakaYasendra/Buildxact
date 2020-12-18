@@ -1,7 +1,7 @@
 # Buildxact
 
 ## Setup
-Nuget Package use to add the dependencies.
+NuGet Package use to add the dependencies.
 
 ## Before you run the test please update the password for reset password and also update the new user data.
 ## Please follow the comments in the code
