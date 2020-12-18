@@ -10,6 +10,16 @@
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="87.0.4280.8800" />
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="PageAssembly\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Util\" />
+    <Folder Include="Test\" />
+  </ItemGroup>
 </Project>
